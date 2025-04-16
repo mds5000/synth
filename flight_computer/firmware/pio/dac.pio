@@ -1,0 +1,37 @@
+;----------------------------------------------------
+;   PIO State Machine for DAC8565 Quad DAC
+; 
+;   OUT PINS: count=1, DAC_DATA
+;   SET PINS: count=1, DAC_SYNC
+;   SIDE SET: count=1, DAC_CLK
+;---------------------------------------------------
+;
+.program dac_8565
+.side_set 1 opt
+
+.wrap_target
+    set y 3         side 1
+    set x 0
+    set pins 1
+    wait 1 irq 0
+
+start_ch:
+    jmp !y load
+    jmp no_load
+load:
+    set x 1
+    no_load:
+    pull
+    in osr 16
+    in null 1
+    in y 4
+    in x 3
+    set pins 0
+    mov osr ::isr
+bit:
+    out pins 1      side 1
+    jmp !osre bit   side 0
+
+    set pins 1      side 1
+    jmp y-- start_ch
+.wrap

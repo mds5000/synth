@@ -1,0 +1,18 @@
+[package]
+name = "firmware"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cortex-m = "0.7.7"
+cortex-m-rt = "0.7.5"
+critical-section = "1.2.0"
+embedded-graphics = "0.8.1"
+embedded-hal = "1.0.0"
+embedded-hal-bus = "0.2.0"
+panic-halt = "1.0.0"
+pio = "0.2.1"
+pio-proc = "0.2.2"
+portable-atomic = { version = "1.9.0", features = ["critical-section"] }
+rp235x-hal = { version = "0.2.0", features = ["critical-section-impl", "rt"] }
+ssd1351 = "0.5.0"

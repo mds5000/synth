@@ -1,0 +1,29 @@
+RP2350 PICO 2 PINOUT
+--------------------
+0   -   MIDI_TX - UART0
+1   -   MIDI_RX -   UART0
+2   - 
+3   -
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13  -   DISP_CS
+14  -   BTN_1
+15  -   BTN_2
+16  - DAC1_SYNC
+17  - DAC1_CLK
+18  - DAC1_DATA
+19  - DAC2_SYNC
+20  - DAC2_CLK
+21  - DAC2_DATA
+22  -   DAC_RST
+--
+26  -   CV_IN1  - ADC0
+27  -   CV_IN2  - ADC1
+28  -   CV_IN3  - ADC2

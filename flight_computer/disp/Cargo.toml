@@ -1,0 +1,12 @@
+[package]
+name = "disp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+embedded-graphics = "0.8.1"
+embedded-graphics-simulator = "0.7.0"
+enum_dispatch = "0.3.13"
+heapless = "0.8.0"
+micromath = "2.1.0"
+u8g2-fonts = "0.4.0"
